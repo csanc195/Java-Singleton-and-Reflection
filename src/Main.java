@@ -18,6 +18,10 @@ public class Main {
         Method [] theseMethods = thisClass.getMethods();
         //Arrays.stream(theseMethods).forEach(System.out::println);
 
+        for(Method m: theseMethods){
+            System.out.println(m);
+        }
+
         // First attempt will fail since the constructor in SomeSingleton is not publicly accessible.
         try {
             Object someObject = Class.forName("SomeSingleton").newInstance();
